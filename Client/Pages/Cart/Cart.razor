@@ -7,6 +7,6 @@
 {
     @foreach (var line in Model.Items)
     {
-        <Item details="@line" OnDeleted="HandlItemDeleted"/>
+        <Item details="@line" OnDeleted="ReloadCart" OnQuantityChanged="ReloadCart"/>
     }
 }
