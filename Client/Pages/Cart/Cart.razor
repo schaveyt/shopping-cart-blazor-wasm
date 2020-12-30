@@ -7,6 +7,6 @@
 {
     @foreach (var line in Model.Items)
     {
-        <Item details="@line"/>
+        <Item details="@line" OnDeleted="HandlItemDeleted"/>
     }
 }

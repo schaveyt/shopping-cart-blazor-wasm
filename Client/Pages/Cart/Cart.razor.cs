@@ -17,5 +17,10 @@ namespace ShoppingCartStarter.Client.Pages.Cart
         {
             Model = await Http.GetFromJsonAsync<Details.Model>("api/cart");
         }
+
+        protected void HandlItemDeleted(Details.Model.LineItem item)
+        {
+            Model.Items.Remove(item);
+        }
     }
 }
